@@ -1,0 +1,28 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Bamba",
+        "price": 12.6,
+        "desc": "dsfsdf gfhdfg dddf"
+      },
+      {
+        "id": 2,
+        "name": "Bisli",
+        "price": 10,
+        "desc": "dsfsdf gfhdfg dddf"
+      },
+      {
+        "id": 3,
+        "name": "Kefli",
+        "price": 9.2,
+        "desc": "dsfsdf gfhdfg dddf"
+      },
+      {
+        "id": 4,
+        "name": "Doritos",
+        "price": 2.6,
+        "desc": "dsfsdf gfhdfg dddf"
+      }
+    ]
+}

@@ -1,0 +1,3 @@
+<div *ngFor="let product of products" class="products-container" [ngClass]="{'products-container-selected': selectedProductId === product.id}">
+  <app-product [product]="product" (productSelected)="onProductSelected($event)" ></app-product>
+</div>

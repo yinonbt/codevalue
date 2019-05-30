@@ -1,0 +1,9 @@
+<form [formGroup]="detailsFormGroup" (ngSubmit)="saveProduct()">
+  <div>
+    <label for="inputPrice">
+      Price:
+    </label>
+    <input id="inputPrice" type="number" formControlName="formControlPrice"  />
+    <button type="submit" [disabled]="detailsFormGroup.invalid">Save</button>
+  </div>
+</form>
