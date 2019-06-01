@@ -1,5 +1,9 @@
 .all-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .product-details {
+    width: 65%;
+    padding: 10px;
+  }
 }
