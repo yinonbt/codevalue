@@ -1,6 +1,29 @@
 <form [formGroup]="detailsFormGroup" (ngSubmit)="saveProduct()">
   <fieldset>
-    <legend>{{product.name}} Details:</legend>
+    <legend>{{ product.name }} Details:</legend>
+    <div class="field-container">
+      <label for="inputName" class="field-label">
+        Name:
+      </label>
+      <input
+        class="wide-input"
+        id="inputName"
+        type="text"
+        formControlName="formControlName"
+      />
+    </div>
+
+    <div class="field-container">
+      <label for="textareaDesc" class="field-label">
+        Description:
+      </label>
+      <textarea
+        class="wide-input"
+        id="textareaDesc"
+        type="number"
+        formControlName="formControlDesc"
+      ></textarea>
+    </div>
     <div class="field-container">
       <label for="inputPrice" class="field-label">
         Price:
