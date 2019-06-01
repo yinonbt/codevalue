@@ -1,11 +1,12 @@
 <form [formGroup]="detailsFormGroup" (ngSubmit)="saveProduct()">
-  <div>
+  <fieldset>
+    <legend>{{product.name}} Details:</legend>
     <div class="field-container">
-      <label for="inputPrice"  class="field-label">
+      <label for="inputPrice" class="field-label">
         Price:
       </label>
       <input id="inputPrice" type="number" formControlName="formControlPrice" />
     </div>
     <button type="submit" [disabled]="detailsFormGroup.invalid">Save</button>
-  </div>
+  </fieldset>
 </form>
