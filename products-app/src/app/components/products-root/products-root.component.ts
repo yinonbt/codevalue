@@ -14,7 +14,8 @@ export class ProductsRootComponent implements OnInit {
   constructor(private productService: ProductsService) { }
 
   ngOnInit() {
-    this.products$ = this.productService.getAll();
+    this.products$ = this.productService.products$;
+    this.productService.getAll();
   }
 
   onProductSelected(product: Product) {
