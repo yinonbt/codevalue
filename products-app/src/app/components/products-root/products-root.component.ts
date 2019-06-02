@@ -49,14 +49,13 @@ export class ProductsRootComponent implements OnInit, OnDestroy {
   }
 
   onAddClicked() {
-    this.selectedProduct = null;
-    console.log('newProductId: ', this.newProductId);
-    // this.selectedProduct = {
-    //   id: this.newProductId,
-    //   name: 'New Product',
-    //   desc: '',
-    //   price: 0,
-    //   creationDate: new Date()
-    // };
+    // console.log('newProductId: ', this.newProductId);
+    this.selectedProduct = {
+      id: this.newProductId,
+      name: 'New Product',
+      desc: '',
+      price: 0,
+      creationDate: new Date()
+    };
   }
 }
