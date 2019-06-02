@@ -1,8 +1,8 @@
 import { Product } from "./../interfaces/product";
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, BehaviorSubject } from "rxjs";
-import { tap } from 'rxjs/operators';
+import { tap } from "rxjs/operators";
 import { environment } from "src/environments/environment";
 
 @Injectable({
@@ -24,6 +24,23 @@ export class ProductsService {
     const url = `${environment.apiUrl}products/${item.id}`;
     return this.http
       .put<Product>(url, item)
+      .pipe(
+        tap(o => {
+          this.getAll();
+        })
+      )
+      .toPromise();
+  }
+
+  add(product: Product): Promise<Product> {
+    const url = `${environment.apiUrl}products`;
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json"
+      })
+    };
+    return this.http
+      .post<Product>(url, product, httpOptions)
       .pipe(
         tap(o => {
           this.getAll();

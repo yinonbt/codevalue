@@ -10,15 +10,15 @@
     {
       "id": 2,
       "name": "Bisli Osem",
-      "desc": "pure chemistry!!!",
+      "desc": "pure chemistry!",
       "price": 12,
       "creationDate": "2019-05-29T18:25:43.511Z"
     },
     {
       "id": 3,
       "name": "Kefli",
+      "desc": "",
       "price": 9.2,
-      "desc": "dsfsdf gfhdfg dddf",
       "creationDate": "2019-05-29T18:25:43.511Z"
     },
     {
@@ -27,6 +27,20 @@
       "desc": "Subtropical fruit",
       "price": 10,
       "creationDate": "2019-06-02T13:41:53.651Z"
+    },
+    {
+      "id": 5,
+      "name": "Mango",
+      "desc": "Tropical fruit - maybe...",
+      "price": 12,
+      "creationDate": "2019-06-02T21:39:36.933Z"
+    },
+    {
+      "id": 6,
+      "name": "Melon",
+      "desc": "sweet vegetable",
+      "price": 2,
+      "creationDate": "2019-06-02T21:40:45.809Z"
     }
   ]
 }

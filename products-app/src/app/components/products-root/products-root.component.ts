@@ -44,14 +44,19 @@ export class ProductsRootComponent implements OnInit, OnDestroy {
   }
 
   async onProductUpdated(product: Product) {
+    if (product.id > -1) {
     await this.productService.update(product);
+    } else {
+      product.id = this.newProductId;
+      await this.productService.add(product);
+    }
     this.selectedProduct = null;
   }
 
   onAddClicked() {
     // console.log('newProductId: ', this.newProductId);
     this.selectedProduct = {
-      id: this.newProductId,
+      id: -1,
       name: 'New Product',
       desc: '',
       price: 0,
