@@ -10,6 +10,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./products-root.component.scss']
 })
 export class ProductsRootComponent implements OnInit, OnDestroy {
+  
   products$: Observable<Product[]>;
   destroy$: Subject<boolean> = new Subject<boolean>();
   selectedProduct: Product;
@@ -21,9 +22,9 @@ export class ProductsRootComponent implements OnInit, OnDestroy {
     this.products$ = this.productService.products$;
     this.products$.takeUntil(this.destroy$).subscribe(products => {
       if (products != null) {
-        let maxId: number;
+        let maxId = this.newProductId;
         products.map(function(obj) {
-          if (obj.id > this.newProductId) {
+          if (obj.id > maxId) {
             maxId = obj.id;
           }
         });
