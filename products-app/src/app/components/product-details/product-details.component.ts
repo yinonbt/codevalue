@@ -25,7 +25,7 @@ export class ProductDetailsComponent implements OnChanges {
   ngOnChanges() {
     this.detailsFormGroup = this.formBuilder.group({
       formControlName: [this.product.name, Validators.required],
-      formControlDesc: [this.product.desc, Validators.required],
+      formControlDesc: [this.product.desc],
       formControlPrice: [this.product.price, Validators.required]
     });
   }
