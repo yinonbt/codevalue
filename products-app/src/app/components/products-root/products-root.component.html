@@ -1,5 +1,5 @@
 <div class="all-container">
-  <app-products-list class="products-list" [products]="products$ | async" (productSelected)="onProductSelected($event)">
+  <app-products-list class="products-list" [products]="products$ | async" [selectedProduct]="selectedProduct" (productSelected)="onProductSelected($event)">
   </app-products-list>
-  <app-product-details *ngIf="selectedProduct" [product]="selectedProduct" class="product-details"></app-product-details>
+  <app-product-details *ngIf="selectedProduct" [product]="selectedProduct" (productUpdated)="onProductUpdated($event)" class="product-details"></app-product-details>
 </div>

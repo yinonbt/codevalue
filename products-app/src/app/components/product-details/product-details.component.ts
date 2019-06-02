@@ -32,5 +32,13 @@ export class ProductDetailsComponent implements OnChanges {
 
   saveProduct() {
     console.log(this.detailsFormGroup.value);
+    const productUpdated: Product = {
+      id: this.product.id,
+      name: this.detailsFormGroup.get('formControlName').value,
+      desc: this.detailsFormGroup.get('formControlDesc').value,
+      price: this.detailsFormGroup.get('formControlPrice').value,
+      creationDate: this.product.creationDate
+    };
+    this.productUpdated.emit(productUpdated);
   }
 }

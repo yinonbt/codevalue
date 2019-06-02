@@ -22,4 +22,9 @@ export class ProductsRootComponent implements OnInit {
     this.selectedProduct = product;
   }
 
+  async onProductUpdated(product: Product) {
+    await this.productService.update(product);
+    this.selectedProduct = null;
+  }
+
 }

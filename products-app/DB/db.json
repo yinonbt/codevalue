@@ -1,32 +1,32 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Bamba",
-        "price": 12.6,
-        "desc": "dsfsdf gfhdfg dddf",
-        "creationDate": "2019-05-29T18:25:43.511Z"
-      },
-      {
-        "id": 2,
-        "name": "Bisli",
-        "price": 10,
-        "desc": "dsfsdf gfhdfg dddf",
-        "creationDate": "2019-05-29T18:25:43.511Z"
-      },
-      {
-        "id": 3,
-        "name": "Kefli",
-        "price": 9.2,
-        "desc": "dsfsdf gfhdfg dddf",
-        "creationDate": "2019-05-29T18:25:43.511Z"
-      },
-      {
-        "id": 4,
-        "name": "Doritos",
-        "price": 2.6,
-        "desc": "dsfsdf gfhdfg dddf",
-        "creationDate": "2019-05-29T18:25:43.511Z"
-      }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Bamba",
+      "price": 12.6,
+      "desc": "dsfsdf gfhdfg dddf",
+      "creationDate": "2019-05-29T18:25:43.511Z"
+    },
+    {
+      "id": 2,
+      "name": "Bisli Osem",
+      "desc": "pure chemistry!!!",
+      "price": 12,
+      "creationDate": "2019-05-29T18:25:43.511Z"
+    },
+    {
+      "id": 3,
+      "name": "Kefli",
+      "price": 9.2,
+      "desc": "dsfsdf gfhdfg dddf",
+      "creationDate": "2019-05-29T18:25:43.511Z"
+    },
+    {
+      "id": 4,
+      "name": "Doritos",
+      "price": 2.6,
+      "desc": "dsfsdf gfhdfg dddf",
+      "creationDate": "2019-05-29T18:25:43.511Z"
+    }
+  ]
 }
