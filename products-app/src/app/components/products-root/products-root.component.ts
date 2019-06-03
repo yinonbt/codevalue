@@ -1,9 +1,8 @@
 import { Product } from './../../interfaces/product';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subject, BehaviorSubject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import 'rxjs/add/operator/takeUntil';
 import { ProductsService } from 'src/app/services/products.service';
-import { debounceTime, map, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-products-root',
@@ -12,9 +11,7 @@ import { debounceTime, map, distinctUntilChanged } from 'rxjs/operators';
 })
 export class ProductsRootComponent implements OnInit, OnDestroy {
   
-  products: Product[];
-  productsAfterFilter$: Observable<Product[]>;
-  searchTermChanged = new BehaviorSubject<string>('');
+  products$: Observable<Product[]>;
   destroy$: Subject<boolean> = new Subject<boolean>();
   selectedProduct: Product;
   newProductId = 0;
@@ -22,11 +19,11 @@ export class ProductsRootComponent implements OnInit, OnDestroy {
   constructor(private productService: ProductsService) {}
 
   ngOnInit() {
-    this.productService.products$.takeUntil(this.destroy$).subscribe(products => {
-      this.products = products;
+    this.products$ = this.productService.products$;
+    this.products$.takeUntil(this.destroy$).subscribe(products => {
       if (products != null) {
         let maxId = this.newProductId;
-        products.map((obj) => {
+        products.map(function(obj) {
           if (obj.id > maxId) {
             maxId = obj.id;
           }
@@ -35,24 +32,12 @@ export class ProductsRootComponent implements OnInit, OnDestroy {
       }
     });
     this.productService.getAll();
-
-    this.productsAfterFilter$ = this.searchTermChanged
-      .pipe(debounceTime(200),
-        map(x => x.trim()),
-        distinctUntilChanged(),
-        map(keyword => {
-          return this.products.filter(show => show.name.indexOf(keyword) !== -1);
-        }));
   }
 
   ngOnDestroy(): void {
     this.destroy$.next(true);
 
     this.destroy$.unsubscribe();
-  }
-
-  filterProducts(val: string) {
-    this.searchTermChanged.next(val);
   }
 
   onProductSelected(product: Product) {

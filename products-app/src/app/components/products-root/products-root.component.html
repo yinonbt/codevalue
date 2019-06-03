@@ -1,8 +1,7 @@
 <div class="add-container">
   <button (click)="onAddClicked()" class="add-button">Add New Product</button>
-  <input type="search" #searchInput (input)="filterProducts(searchInput.value)" />
   <div class="list-and-details-container">
-    <app-products-list class="products-list" [products]="productsAfterFilter$ | async" [selectedProduct]="selectedProduct"
+    <app-products-list class="products-list" [products]="products$ | async" [selectedProduct]="selectedProduct"
       (productSelected)="onProductSelected($event)" (productDeleted)="onProductDeleted($event)">
     </app-products-list>
     <app-product-details *ngIf="selectedProduct" [product]="selectedProduct" (productUpdated)="onProductUpdated($event)"
