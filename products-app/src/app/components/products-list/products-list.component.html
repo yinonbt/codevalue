@@ -1,3 +1,16 @@
-<div *ngFor="let product of products" class="products-container" [ngClass]="{'products-container-selected': selectedProduct?.id === product.id}">
-  <app-product [product]="product" (productSelected)="onProductSelected($event)" (productDeleted)="onProductDeleted($event)"></app-product>
+<div>
+  <input type="search" #searchInput (input)="filterProducts(searchInput.value)" />
+  <div
+    *ngFor="let product of productsAfterFilter$ | async"
+    class="products-container"
+    [ngClass]="{
+      'products-container-selected': selectedProduct?.id === product.id
+    }"
+  >
+    <app-product
+      [product]="product"
+      (productSelected)="onProductSelected($event)"
+      (productDeleted)="onProductDeleted($event)"
+    ></app-product>
+  </div>
 </div>
