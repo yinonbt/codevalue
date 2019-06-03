@@ -1,32 +1,60 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Bamba",
-      "price": 12.6,
-      "desc": "dsfsdf gfhdfg dddf",
-      "creationDate": "2019-05-29T18:25:43.511Z"
-    },
-    {
       "id": 2,
-      "name": "Bisli",
-      "price": 10,
-      "desc": "dsfsdf gfhdfg dddf",
+      "name": "Bisli Osem",
+      "desc": "pure chemistry!",
+      "price": 12,
       "creationDate": "2019-05-29T18:25:43.511Z"
     },
     {
       "id": 3,
       "name": "Kefli",
+      "desc": "",
       "price": 9.2,
-      "desc": "dsfsdf gfhdfg dddf",
       "creationDate": "2019-05-29T18:25:43.511Z"
     },
     {
       "id": 4,
-      "name": "Doritos",
-      "price": 2.6,
-      "desc": "dsfsdf gfhdfg dddf",
-      "creationDate": "2019-05-29T18:25:43.511Z"
+      "name": "Avocado",
+      "desc": "Subtropical fruit.",
+      "price": 10,
+      "creationDate": "2019-06-02T13:41:53.651Z"
+    },
+    {
+      "id": 5,
+      "name": "Mango",
+      "desc": "Tropical fruit - maybe...",
+      "price": 12,
+      "creationDate": "2019-06-02T21:39:36.933Z"
+    },
+    {
+      "id": 6,
+      "name": "Melon",
+      "desc": "sweet vegetable",
+      "price": 2,
+      "creationDate": "2019-06-02T21:40:45.809Z"
+    },
+    {
+      "id": 7,
+      "name": "Halva",
+      "desc": "Oriental sweet",
+      "price": 20,
+      "creationDate": "2019-06-02T21:44:56.358Z"
+    },
+    {
+      "id": 8,
+      "name": "Chrain",
+      "desc": "Hot of poland jews",
+      "price": 12.4,
+      "creationDate": "2019-06-02T21:55:36.131Z"
+    },
+    {
+      "id": 10,
+      "name": "Banana",
+      "desc": "yellow energy bom",
+      "price": 0,
+      "creationDate": "2019-06-02T21:57:48.089Z"
     }
   ]
 }

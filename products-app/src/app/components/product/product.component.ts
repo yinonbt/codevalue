@@ -10,11 +10,19 @@ export class ProductComponent implements OnInit {
   @Input() product: Product;
   @Output()
   productSelected = new EventEmitter<Product>();
+  @Output()
+  productDeleted = new EventEmitter<Product>();
+
   constructor() {}
 
   ngOnInit() {}
 
   onClick() {
     this.productSelected.emit(this.product);
+  }
+
+  onDeleteClick(event: Event) {
+    event.stopPropagation();
+    this.productDeleted.emit(this.product);
   }
 }

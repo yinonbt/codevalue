@@ -48,4 +48,12 @@ export class ProductsService {
       )
       .toPromise();
   }
+
+  delete(item: Product): Promise<any> {
+    const url = `${environment.apiUrl}products/${item.id}`;
+    return this.http.delete<any>(url)
+      .pipe(tap(o => {
+        this.getAll();
+      })).toPromise();
+  }
 }

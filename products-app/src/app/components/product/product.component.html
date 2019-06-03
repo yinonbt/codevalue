@@ -2,5 +2,5 @@
   <h2>
     {{product.name}}
   </h2>
-  <p>{{product.desc}}</p>
+  <div class="desc-delete-container"><span>{{product.desc}}</span><button (click)="onDeleteClick($event)">Delete</button></div>
 </div>

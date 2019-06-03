@@ -54,6 +54,11 @@ export class ProductsRootComponent implements OnInit, OnDestroy {
     this.selectedProduct = null;
   }
 
+  async onProductDeleted(product: Product) {
+    await this.productService.delete(product);
+    this.selectedProduct = null;
+  }
+
   onAddClicked() {
     // console.log('newProductId: ', this.newProductId);
     this.selectedProduct = {

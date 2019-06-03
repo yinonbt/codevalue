@@ -11,6 +11,8 @@ export class ProductsListComponent implements OnInit {
   @Input() selectedProduct: Product;
   @Output()
   productSelected = new EventEmitter<Product>();
+  @Output()
+  productDeleted = new EventEmitter<Product>();
   constructor() {}
 
   ngOnInit() {}
@@ -18,5 +20,9 @@ export class ProductsListComponent implements OnInit {
   onProductSelected(product: Product) {
     this.selectedProduct = product;
     this.productSelected.emit(product);
+  }
+
+  onProductDeleted(product: Product) {
+    this.productDeleted.emit(product);
   }
 }
