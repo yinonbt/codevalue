@@ -1,7 +1,7 @@
 <div>
   <input type="search" #searchInput (input)="filterProducts(searchInput.value)" />
   <div
-    *ngFor="let product of productsAfterFilter$ | async"
+    *ngFor="let product of productsAfterFilter"
     class="products-container"
     [ngClass]="{
       'products-container-selected': selectedProduct?.id === product.id
